@@ -1,0 +1,34 @@
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2024-01-04 04:22:28 UTC; 7h ago
+     Docs: https://docs.docker.com
+  Process: 2429 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 2412 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 2435 (dockerd)
+    Tasks: 99
+   Memory: 107.9M
+   CGroup: /system.slice/docker.service
+           ├─ 2435 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+           ├─ 2672 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9559 -container-ip 172.17.0.2 -container-port 8080
+           ├─ 2682 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 9559 -container-ip 172.17.0.2 -container-port 8080
+           ├─ 2729 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8081 -container-ip 172.17.0.4 -container-port 8081
+           ├─ 2738 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8081 -container-ip 172.17.0.4 -container-port 8081
+           ├─ 2762 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5000 -container-ip 172.17.0.4 -container-port 5000
+           ├─ 2768 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 5000 -container-ip 172.17.0.4 -container-port 5000
+           ├─10446 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3306 -container-ip 172.19.0.2 -container-port 3306
+           ├─10452 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 3306 -container-ip 172.19.0.2 -container-port 3306
+           ├─10599 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8888 -container-ip 172.19.0.3 -container-port 80
+           ├─10609 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8888 -container-ip 172.19.0.3 -container-port 80
+           ├─15623 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9000 -container-ip 172.17.0.3 -container-port 9000
+           └─15629 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 9000 -container-ip 172.17.0.3 -container-port 9000
+
+Jan 04 04:51:53 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T04:51:53.122260081Z" level=info msg="ignoring event" container=bba469cdfd57d4f6da45c4072f4255da8100245f3b3b69d29489091362fbea2f module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 05:58:35 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T05:58:35.024152142Z" level=info msg="ignoring event" container=c15d8f617c5555ff8914699399514ccdb77d3ccc6382888df10517770924d581 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 05:58:35 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T05:58:35.898762307Z" level=info msg="Layer sha256:82597239215918c8a987be1758a2e90ae69d9fc5c02fb951d16c1144a4b93886 cleaned up"
+Jan 04 05:58:36 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T05:58:36.033716958Z" level=info msg="Layer sha256:82597239215918c8a987be1758a2e90ae69d9fc5c02fb951d16c1144a4b93886 cleaned up"
+Jan 04 06:50:10 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T06:50:10.988584502Z" level=info msg="ignoring event" container=8c889a4c32698c55aea06d4421243f47d7d54f90023f54127973b190391c43a7 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 06:50:10 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T06:50:10.994063064Z" level=info msg="ignoring event" container=c275d254733d4f4f88fe61582c854b8a5672d902397c6255bea4599180eca15d module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 06:50:10 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T06:50:10.996331049Z" level=info msg="ignoring event" container=bdaa461b13363474b8493b5bb508ca9ffbe14775f1e6fc7b318cbd154161abb2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 07:23:50 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T07:23:50.388891185Z" level=info msg="ignoring event" container=3863837d4eb504f4cba2fe4749fe22e21234af94c3d43fbc0702f88dbcbd9cff module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 07:42:15 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T07:42:15.925266483Z" level=info msg="ignoring event" container=d676b207c479de3e1e2458414bd75bf6cfca5c4f252c54398e653bbd09aebf2e module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Jan 04 07:42:16 ip-172-31-32-48.ap-northeast-2.compute.internal dockerd[2435]: time="2024-01-04T07:42:16.016144604Z" level=info msg="ignoring event" container=19ff20d9ff710b161a7f467ff818008cb10d22c520e8c9b80a57959c827c3916 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"

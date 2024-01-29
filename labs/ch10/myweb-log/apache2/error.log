@@ -1,0 +1,9 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jan 04 07:11:43.319685 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.21 configured -- resuming normal operations
+[Thu Jan 04 07:11:43.319810 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jan 04 07:24:02.853414 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.21 configured -- resuming normal operations
+[Thu Jan 04 07:24:02.853477 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+sh: 1: /usr/sbin/sendmail: not found
+[Thu Jan 04 07:35:08.251981 2024] [php7:error] [pid 31] [client 121.140.122.206:57551] PHP Fatal error:  Uncaught Error: Call to undefined function str_contains() in /var/www/html/wp-admin/menu-header.php:115\nStack trace:\n#0 /var/www/html/wp-admin/menu-header.php(298): _wp_menu_output(Array, Array)\n#1 /var/www/html/wp-admin/admin-header.php(258): require('/var/www/html/w...')\n#2 /var/www/html/wp-admin/index.php(115): require_once('/var/www/html/w...')\n#3 {main}\n  thrown in /var/www/html/wp-admin/menu-header.php on line 115, referer: http://docker.gguduck.com:8888/wp-login.php
+sh: 1: /usr/sbin/sendmail: not found

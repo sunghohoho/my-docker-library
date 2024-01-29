@@ -1,0 +1,13 @@
+FROM alpine
+MAINTAINER "ksh <kim9746@saltware.co.kr>"
+LABEL "purpose"="webserver practice"
+
+RUN apk update && apk add apache2
+
+WORKDIR /var/www/html
+
+ADD index.html .
+
+EXPOSE 80
+
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]

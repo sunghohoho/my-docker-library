@@ -1,0 +1,17 @@
+#경량화를 사용한 Dockerfile, apt 잔여물 제거 버전
+
+FROM ubuntu:14.04
+
+MAINTAINER "ksh <kim9746@saltware.co.kr>"
+LABEL "purpose"="webserver practice"
+
+RUN apt-get update && apt-get install apache2 -y && \
+	apt-get clean -y && \
+	apt-get autoremove -y && \
+	rm -rfv /tmp/* /var/lib/apt/lists/* /var/tmp/*
+
+WORKDIR /var/www/html
+ADD index.html .
+EXPOSE 80
+CMD apachectl -D FOREGROUND
+

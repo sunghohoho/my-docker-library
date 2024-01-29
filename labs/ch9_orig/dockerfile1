@@ -1,0 +1,13 @@
+FROM ubuntu:14.04
+
+MAINTAINER "ksh <kim9746@saltware.co.kr>"
+
+LABEL "purpose"="webserver practice version1"
+
+RUN apt update -y && apt install -y apache2
+
+WORKDIR /var/www/html
+
+EXPOSE 80
+
+CMD ["apachectl","-D","FOREGROUND"]
